@@ -1,0 +1,29 @@
+.container{
+  width: 100%;
+  max-width:1024px;
+  min-width:768px;
+  margin:0 auto;
+}
+.memo{
+  display:inline-block;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #cccccc;
+  background-color: #eeeeee;
+  border-radius:5px;
+}
+.memo .memo-header{
+  height:20px;
+  width:100%;
+  background-color: #cccccc;
+}
+.memo .memo-header .remove-memo{
+  float:right;
+  background-color:#cccccc;
+  border:none;
+  cursor:pointer;
+}
+.memo .memo-content{
+  clear:both;
+  padding: 5px 5px;
+}

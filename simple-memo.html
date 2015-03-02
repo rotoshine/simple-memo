@@ -1,0 +1,39 @@
+<head>
+  <title>simple memo</title>
+</head>
+
+<body>  
+  <h1>Meteor 입문하기</h1>
+  <div class="container">    
+    <!-- memo view template 호출 -->
+    {{> newMemo}}
+    {{> Memo}}
+  </div>
+</body>
+<template name="newMemo">
+  <form class="new-memo">
+    <input type="text" name="newMemo"><button class="add-memo">추가</button>
+  </form>  
+</template>
+<template name="Memo">  
+  <div>
+    {{#if hasMemo}}
+      작성된 메모 갯수 {{memoCount}}
+    {{/if}}
+    {{#unless hasMemo}}
+      작성된 메모가 없습니다.
+    {{/unless}}
+    <ul class="memo-list">
+      {{#each memos}}
+      <li class="memo">
+        <div class="memo-header">
+          <button class="remove-memo">x</button>
+        </div>
+        <div class="memo-content">
+          {{content}}
+        </div>
+      </li>
+      {{/each}}
+    </ul>  
+  </div>
+</template>
